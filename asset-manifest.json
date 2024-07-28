@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ImageHub/static/css/main.0b91079e.css",
+    "main.css": "/ImageHub/static/css/main.e6ecccfd.css",
     "main.js": "/ImageHub/static/js/main.2181ea57.js",
     "index.html": "/ImageHub/index.html",
-    "main.0b91079e.css.map": "/ImageHub/static/css/main.0b91079e.css.map",
+    "main.e6ecccfd.css.map": "/ImageHub/static/css/main.e6ecccfd.css.map",
     "main.2181ea57.js.map": "/ImageHub/static/js/main.2181ea57.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b91079e.css",
+    "static/css/main.e6ecccfd.css",
     "static/js/main.2181ea57.js"
   ]
 }
