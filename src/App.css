@@ -21,6 +21,18 @@
 .dark-mode body{
   background-color: black;
 }
+.dark-mode .app{
+  background-color: black;
+}
+/* .dark-mode *{
+  background-color: black;
+} */
+.dark-mode .switch{
+  background-color: white;
+  color: white;
+
+}
+
 .dark-mode #searchResult img{
   border: 1px solid white;
 }
