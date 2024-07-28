@@ -16,6 +16,13 @@
 }
 .dark-mode .sidebar{
   background-color: black;
+  border: 1px solid white;
+}
+.dark-mode body{
+  background-color: black;
+}
+.dark-mode #searchResult img{
+  border: 1px solid white;
 }
 main {
   flex: 1;
@@ -27,14 +34,11 @@ main {
   display: grid;
   grid-template-columns: 1fr ;
   grid-gap: 1px;
-  width: 100%;
-
-  
+  width: 100%;  
 }
 #searchResult img{
   height: 350px;
   width: 100%;
-
   object-fit: cover;
   border-radius: 5px;
   border: 2px solid black;
@@ -74,6 +78,11 @@ a{
 
 @media(max-width:480px){
   main a{
-    font-size: 9px;
+    font-size: 10px;
+    text-align: center;
+  }
+  #searchResult img{
+    object-fit: cover;
+    width: 100%;
   }
 }
