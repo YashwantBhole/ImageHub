@@ -23,7 +23,7 @@ const App = () => {
     const searchResult = document.getElementById('searchResult');
     const loadMore = document.getElementById('loadMore')
    let Query = query
-    const url = `https://api.unsplash.com/search/photos?page=${page}&per_page=15&query='${Query}'&client_id=YCHT93HDzMmzvuCknIRMbrQJRi_t0v8WVx-43FN-Q0I`;
+    const url = `https://api.unsplash.com/search/photos?page=${page}&per_page=20&query='${Query}'&client_id=YCHT93HDzMmzvuCknIRMbrQJRi_t0v8WVx-43FN-Q0I`;
 
     let response = await fetch(url);
     let data = await response.json();
@@ -35,10 +35,10 @@ const App = () => {
     }
     results.map((result) => {
       const image = document.createElement('img');
-      image.src = result.links.download;
+      image.src = result.urls.small;
 
       const link = document.createElement('a');
-      link.href = result.urls.small;
+      link.href = result.links.html;
       link.target = "_blank"
 
       searchResult.appendChild(link);
