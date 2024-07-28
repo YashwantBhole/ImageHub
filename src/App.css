@@ -4,6 +4,7 @@
   min-height: 100vh;
   background-color: #f0f0f0;
   transition: background-color 0.3s ease;
+  width: 100%;
 
 }
 
@@ -24,13 +25,15 @@
 .dark-mode .app{
   background-color: black;
 }
-/* .dark-mode *{
+.dark-mode *{
   background-color: black;
-} */
+}
 .dark-mode .switch{
   background-color: white;
   color: white;
-
+}
+.dark-mode #searchInput{
+  color: white;
 }
 
 .dark-mode #searchResult img{
@@ -93,8 +96,7 @@ a{
     font-size: 10px;
     text-align: center;
   }
-  #searchResult img{
-    object-fit: cover;
+  main{
     width: 100%;
   }
 }

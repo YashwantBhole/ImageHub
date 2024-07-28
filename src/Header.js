@@ -22,6 +22,7 @@ const Header = ({ onToggle, onSearch }) => {
         </h1>
       <div className="search-container">
         <input
+        id='searchInput'
           type="text"
           placeholder="Search..."
           value={query}
