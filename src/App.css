@@ -4,19 +4,24 @@
   min-height: 100vh;
   background-color: #f0f0f0;
   transition: background-color 0.3s ease;
+
 }
 
 .dark-mode {
-  background-color: #121212;
+  background-color: black;
   color: #ffffff;
 }
 .dark-mode a{
   color: white;
 }
+.dark-mode .sidebar{
+  background-color: black;
+}
 main {
   flex: 1;
-  padding: 20px;
+  padding: 15px;
   margin-top: 13px;
+  width: 100%;
 }
 #searchResult{
   display: grid;
@@ -27,7 +32,7 @@ main {
   
 }
 #searchResult img{
-  height: 400px;
+  height: 350px;
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
@@ -36,7 +41,8 @@ main {
 a{
   text-decoration: none;
   color: black;
-  font-size: 13px;
+  width: 90%;
+  font-size: 10px;
   font-family: sans-serif;
   font-weight: 900;
   text-align: center;
@@ -44,11 +50,11 @@ a{
 #loadMore{
   display: none;
   margin-left: 50%;
-  font-size: 20px;
+  font-size: 10px;
   color: yellow;
   background-color: black;
   cursor: pointer;
-  height: 30px;
+  height: 25px;
 }
 #loadMore:hover{
   color: white;
@@ -62,5 +68,11 @@ a{
   }
   .sidebar{
     margin-top: 102px;
+  }
+}
+
+@media(max-width:480px){
+  main a{
+    font-size: 9px;
   }
 }

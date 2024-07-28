@@ -50,7 +50,7 @@ function handleNature(query){
         <FaBars />
       </div>
       <ul>
-         <li onClick={handleArchitect}>Architecture</li>
+         <li onClick={handleArchitect}>Architect</li>
         <li onClick={handleSports}>Sports</li>
         <li onClick={handleNature}>Nature</li>
         <li onClick={handleAnimals}>Animals</li>

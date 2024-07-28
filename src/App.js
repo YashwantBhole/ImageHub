@@ -8,7 +8,6 @@ const App = () => {
 
     const [darkMode, setDarkMode] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(true);
-    const [query, setQuery] = useState('programming')
     let page =1;
 
   const handleToggle = () => {
@@ -23,8 +22,8 @@ const App = () => {
   
     const searchResult = document.getElementById('searchResult');
     const loadMore = document.getElementById('loadMore')
-    setQuery(query)
-    const url = `https://api.unsplash.com/search/photos?page=${page}&per_page=15&query='${query}'&client_id=YCHT93HDzMmzvuCknIRMbrQJRi_t0v8WVx-43FN-Q0I`;
+   let Query = query
+    const url = `https://api.unsplash.com/search/photos?page=${page}&per_page=15&query='${Query}'&client_id=YCHT93HDzMmzvuCknIRMbrQJRi_t0v8WVx-43FN-Q0I`;
 
     let response = await fetch(url);
     let data = await response.json();
@@ -39,7 +38,7 @@ const App = () => {
       image.src = result.links.download;
 
       const link = document.createElement('a');
-      link.href = result.links.html;
+      link.href = result.urls.small;
       link.target = "_blank"
 
       searchResult.appendChild(link);
@@ -55,13 +54,14 @@ const App = () => {
     handleSearch(query)
 
     })
-
+  
   };
 
-   useEffect(()=>{
-    handleSearch(query);
-   },[])
-  
+  useEffect(()=>{
+    handleSearch(query=> 'programming');
+  },[])
+
+
   return (
   <>
    
@@ -70,7 +70,7 @@ const App = () => {
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} handleSearch={handleSearch} />
       <main className={sidebarOpen ? 'main-content open' : 'main-content'}>
         <div id='searchResult'></div>
-        <button id='loadMore'>Load More</button>
+        <button id='loadMore'>Load More⏬</button>
       </main>
     </div>
     </>
